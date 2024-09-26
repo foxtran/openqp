@@ -27,7 +27,7 @@ Open Quantum Platform (OpenQP) is a quantum chemical platform featuring cutting-
 
 - **GCC, G++, Gfortran**: Version >= 8
 - **CMake**: Version >= 3.25
-- **cffi**: Perform pip install cffi
+- **cffi**: Perform `pip install --user cffi`
 - **ninja** (optional)
 - **MPI Library**: OpenMPI For MPI Support. Consult detailed documentation for other MPI libraries
 
