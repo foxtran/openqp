@@ -32,7 +32,7 @@ jobs:
       run: pip install --user cffi
 
     - name: Configure CMake
-      run: cmake -G"Ninja"  -DCMAKE_BUILD_TYPE=${{ matrix.BUILD_TYPE }} -DCMAKE_C_COMPILER=gcc-${{ matrix.GCC }} -DCMAKE_CXX_COMPILER=g++-${{ matrix.GCC }} -DCMAKE_Fortran_COMPILER=gfortran-${{ matrix.GCC }} -DENABLE_OPENMP=ON -DUSE_LIBINT=OFF -DLINALG_LIB_INT64=OFF  -DCMAKE_INSTALL_PREFIX=.
+      run: cmake -G"Ninja" -Bbuild -DCMAKE_BUILD_TYPE=${{ matrix.BUILD_TYPE }} -DCMAKE_C_COMPILER=gcc-${{ matrix.GCC }} -DCMAKE_CXX_COMPILER=g++-${{ matrix.GCC }} -DCMAKE_Fortran_COMPILER=gfortran-${{ matrix.GCC }} -DENABLE_OPENMP=ON -DUSE_LIBINT=OFF -DLINALG_LIB_INT64=OFF  -DCMAKE_INSTALL_PREFIX=.
 
     - name: Build
       run: ninja -C build install
